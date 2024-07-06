@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pedido - E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="jitterbitlogo.png" alt="Logo da Jitterbit">
+        </div>
+    </header>
+
+    <main>
+        <form id="order-form">
+            <fieldset>
+                <legend>Informações do Cliente</legend>
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone *</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço de Entrega</legend>
+                <div class="form-group">
+                    <label for="ruaNumero">Rua e Número *</label>
+                    <input type="text" id="ruaNumero" name="ruaNumero" required>
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro *</label>
+                    <input type="text" id="bairro" name="bairro" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade *</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado *</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione um estado</option>
+                        <!-- Incluir todos os estados do Brasil como options -->
+                        <!-- Exemplo: -->
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <!-- Continuar com outros estados -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP *</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações do Pedido</legend>
+                <div class="form-group">
+                    <label for="idProduto">ID do Produto *</label>
+                    <select id="idProduto" name="idProduto" required>
+                        <option value="">Selecione um produto</option>
+                        <!-- Incluir pelo menos 5 opções de produtos como options -->
+                        <!-- Exemplo: -->
+                        <option value="prod001">Produto 1</option>
+                        <option value="prod002">Produto 2</option>
+                        <!-- Continuar com outros produtos -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade *</label>
+                    <input type="number" id="quantidade" name="quantidade" required>
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Método de Pagamento *</legend>
+                        <div class="radio-group">
+                            <input type="radio" id="cartaoCredito" name="metodoPagamento" value="cartaoCredito" required>
+                            <label for="cartaoCredito">Cartão de Crédito</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="boletoBancario" name="metodoPagamento" value="boletoBancario">
+                            <label for="boletoBancario">Boleto Bancário</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="paypal" name="metodoPagamento" value="paypal">
+                            <label for="paypal">PayPal</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button type="submit">Enviar Pedido</button>
+                <button type="reset">Limpar Formulário</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <p>Endereço: Rua da Agência, 123 - Centro, São Paulo/SP</p>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>E-mail: contato@agenciaficticia.com</p>
+            </div>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <p>&copy;2023 Jitterbit. jitterbit.com</p>
+        </div>
+    </footer>
+</body>
+</html>
